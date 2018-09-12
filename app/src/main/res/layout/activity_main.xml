@@ -8,6 +8,35 @@
     tools:context=".MainActivity"
     android:weightSum="10">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:textAlignment="center"
+        app:contentInsetStart="0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@color/colorAccent"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:layout_marginStart="15sp"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:textSize="15sp"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/pick_button"
+            android:background="@color/colorAccent"/>
+
+    </android.support.v7.widget.Toolbar>
+
     <TextView
         android:id="@+id/text"
         android:layout_width="match_parent"
@@ -22,20 +51,26 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:max="255"
-        android:layout_weight="3"/>
+        android:layout_weight="3"
+        android:progressBackgroundTint="@color/colorAccent"
+        android:background="@color/colorPrimary"/>
 
     <SeekBar
         android:id="@+id/seek2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="3"
-        android:max="255" />
+        android:max="255"
+        android:progressBackgroundTint="@color/colorAccent"
+        android:background="@color/colorPrimary"/>
 
     <SeekBar
         android:id="@+id/seek3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:max="255"
-        android:layout_weight="3"/>
+        android:layout_weight="3"
+        android:progressBackgroundTint="@color/colorAccent"
+        android:background="@color/colorPrimary"/>
 
 </LinearLayout>

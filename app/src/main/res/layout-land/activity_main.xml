@@ -4,50 +4,88 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     tools:context=".MainActivity"
     android:weightSum="3">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:textAlignment="center"
+        app:contentInsetStart="0dp">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@color/colorAccent"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:layout_marginStart="15sp"/>
 
-    <TextView
-        android:id="@+id/text"
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:textSize="15sp"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/pick_button"
+            android:background="@color/colorAccent"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:textSize="25sp" />
+        android:orientation="horizontal"
+        >
 
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="2">
-
-        <SeekBar
-            android:id="@+id/seek1"
+        <TextView
+            android:id="@+id/text"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:max="255"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/seek2"/>
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:layout_weight="1"/>
 
-        <SeekBar
-            android:id="@+id/seek2"
+        <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:max="255"
-            app:layout_constraintBottom_toTopOf="@+id/seek3"
-            app:layout_constraintTop_toBottomOf="@+id/seek1" />
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@color/colorPrimary">
 
-        <SeekBar
-            android:id="@+id/seek3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:max="255"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/seek2"/>
+            <SeekBar
+                android:id="@+id/seek1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="255"
+                android:progressBackgroundTint="@color/colorAccent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/seek2"
+                />
 
+            <SeekBar
+                android:id="@+id/seek2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="255"
+                android:progressBackgroundTint="@color/colorAccent"
+                app:layout_constraintBottom_toTopOf="@+id/seek3"
+                app:layout_constraintTop_toBottomOf="@+id/seek1"
+                />
 
-    </android.support.constraint.ConstraintLayout>
-
+            <SeekBar
+                android:id="@+id/seek3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="255"
+                android:progressBackgroundTint="@color/colorAccent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/seek2"
+                />
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
 </LinearLayout>
