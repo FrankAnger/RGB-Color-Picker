@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity"
+    android:weightSum="3">
+
+
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="25sp" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2">
+
+        <SeekBar
+            android:id="@+id/seek1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="255"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/seek2"/>
+
+        <SeekBar
+            android:id="@+id/seek2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="255"
+            app:layout_constraintBottom_toTopOf="@+id/seek3"
+            app:layout_constraintTop_toBottomOf="@+id/seek1" />
+
+        <SeekBar
+            android:id="@+id/seek3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="255"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/seek2"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>
