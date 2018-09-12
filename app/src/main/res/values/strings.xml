@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">RGB</string>
+    <string name="pick_button">Pick</string>
 </resources>

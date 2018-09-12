@@ -8,6 +8,30 @@
     tools:context=".MainActivity"
     android:weightSum="10">
 
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/app_name"
+            android:textColor="@color/colorAccent"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:textSize="15sp"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/pick_button"
+            android:background="@color/colorAccent"
+            android:layout_marginEnd="5sp"/>
+    </Toolbar>
+
     <TextView
         android:id="@+id/text"
         android:layout_width="match_parent"
@@ -22,20 +46,26 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:max="255"
-        android:layout_weight="3"/>
+        android:layout_weight="3"
+        android:progressBackgroundTint="@color/colorAccent"
+        android:background="@color/colorPrimary"/>
 
     <SeekBar
         android:id="@+id/seek2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="3"
-        android:max="255" />
+        android:max="255"
+        android:progressBackgroundTint="@color/colorAccent"
+        android:background="@color/colorPrimary"/>
 
     <SeekBar
         android:id="@+id/seek3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:max="255"
-        android:layout_weight="3"/>
+        android:layout_weight="3"
+        android:progressBackgroundTint="@color/colorAccent"
+        android:background="@color/colorPrimary"/>
 
 </LinearLayout>
