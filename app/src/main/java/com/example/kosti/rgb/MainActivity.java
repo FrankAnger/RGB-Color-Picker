@@ -63,6 +63,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onResume(){
+        super.onResume();
+
+        new displayRGB().onProgressChanged(seek1, 1, true);
+
+    }
+
     private String addZero(String str) {
         if (str.length() == 1) {
             return "0" + str;

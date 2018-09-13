@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity"
-    android:weightSum="10">
+    android:weightSum="7">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -51,7 +51,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:max="255"
-        android:layout_weight="3"
+        android:layout_weight="2"
         android:progressBackgroundTint="@color/colorAccent"
         android:background="@color/colorPrimary"/>
 
@@ -59,7 +59,7 @@
         android:id="@+id/seek2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="3"
+        android:layout_weight="2"
         android:max="255"
         android:progressBackgroundTint="@color/colorAccent"
         android:background="@color/colorPrimary"/>
@@ -69,7 +69,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:max="255"
-        android:layout_weight="3"
+        android:layout_weight="2"
         android:progressBackgroundTint="@color/colorAccent"
         android:background="@color/colorPrimary"/>
 
