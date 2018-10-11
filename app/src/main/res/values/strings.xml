@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">RGB</string>
-    <string name="pick_button">Pick</string>
+    <string name="pick_button">Random</string>
 </resources>

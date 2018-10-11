@@ -12,6 +12,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.content.ClipboardManager;
 import android.widget.Toast;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -48,19 +49,42 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+
+                int randomR = Random();
+                int randomG = Random();
+                int randomB = Random();
+
+                text.setBackgroundColor(Color.rgb(randomR, randomG, randomB));
+
+                seek1.setProgress(randomR);
+                seek2.setProgress(randomG);
+                seek3.setProgress(randomB);
+            }
+        });
+
+
+
+
+        text.setOnClickListener(new Button.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
                 ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
                 ClipData clip = ClipData.newPlainText("", text.getText());
                 clipboard.setPrimaryClip(clip);
 
                 Context context = getApplicationContext();
                 CharSequence text = "Saved to Clipboard";
-                int duration = Toast.LENGTH_SHORT;
 
-                Toast toast = Toast.makeText(context, text, duration);
+                Toast toast = Toast.makeText(context, text, Toast.LENGTH_SHORT);
                 toast.show();
             }
         });
 
+    }
+
+    private int Random() {
+        return 0 + (int)(Math.random() * ((256)));
     }
 
     @Override
